@@ -7,7 +7,8 @@ import { Html5QrcodeScanner } from "html5-qrcode";
 import { useEffect, useState } from "react";
 
 export default function Home(props) {
-  
+  var titles = ["Easton", "Denton", "Elicott", "Hello"];
+
   const [scanResult, setScanResult] = useState(null);
   
   useEffect(() => {
@@ -48,8 +49,6 @@ export default function Home(props) {
         )
       }
 
-
-      <Podium title1="Easton" title2="Denton" title3="Elicott" />
-    </main>
+  <Podium titles={titles} />
   );
 }
