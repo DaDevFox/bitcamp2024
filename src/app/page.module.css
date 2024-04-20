@@ -9,18 +9,27 @@
 .podium_item_container{
   margin: 0rem 1rem 0rem 1rem;
   width: 6rem;
-  height: 15rem;
+  height: 100%;
 }
 
 .podium_item_fill{
+  position: asbsolute;
   padding: 2rem 0rem 0rem 0rem;
-  height: 15rem;
+  height: 100%;
   background-color: black;
 }
 
 .podium_item_text{
   text-align: center;
   color: black;
+}
+
+.animate {
+  transition: transform .35s ease-in-out;
+}
+
+.animate.grow {
+  transform: scale(1.5);
 }
 
 .main {
