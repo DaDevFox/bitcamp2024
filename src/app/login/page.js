@@ -26,7 +26,7 @@ export default function Login() {
           Forgot Password?
         </a>
         <p>
-          Don&rsquo;t have an account?
+          Don&rsquo;t have an account?&ensp;
           <Link href="/register" style={{ textDecoration: "underline" }}>
             {""}
             Register
