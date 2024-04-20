@@ -15,6 +15,11 @@
   height: 4rem;
 }
 
+.placement_text {
+  align-items: center;
+  justify-content: center;
+}
+
 .leaderboard_item {
   border-radius: 1rem;
   min-width: calc(100%);

@@ -5,6 +5,7 @@ import Leaderboard from "./leaderboard";
 import Placement from "./placement";
 
 import Podium from "./podium";
+import { Html5QrcodeScanner } from "html5-qrcode";
 import { useEffect, useState } from "react";
 
 export default function Home(props) {
