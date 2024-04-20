@@ -1,6 +1,8 @@
 "use client";
 
 import styles from "../page.module.css";
+import Leaderboard from "./leaderboard";
+import Placement from "./placement";
 
 import Podium from "./podium";
 import { Html5QrcodeScanner } from "html5-qrcode";
@@ -45,6 +47,11 @@ export default function Home(props) {
       )}
 
       <Podium points_normalized={[1, 1, 1, 1]} titles={titles} />
+
+      <Leaderboard>
+        {" "}
+        <Placement />{" "}
+      </Leaderboard>
     </main>
   );
 }
