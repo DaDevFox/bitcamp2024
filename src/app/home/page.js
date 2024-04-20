@@ -49,7 +49,7 @@ export default function Home(props) {
         )
       }
 
-  <Podium titles={titles} />
+  <Podium points_normalized={[1, 1, 1, 1]} titles={titles} />
   </main>
   );
 }
