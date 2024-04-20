@@ -53,6 +53,25 @@
   color: black;
 }
 
+.floating_button{
+  position:fixed;
+  left: 1rem;
+  bottom: 1rem;
+
+  border-radius: 2rem;
+  transition: 0.3s;
+  width: 4rem;
+  height: 4rem;
+  background-color: #ffdc82;
+}
+
+.floating_button:hover{
+  background-color: #ffe298;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  cursor: pointer;
+}
+
 .animate {
   transition: transform 0.35s ease-in-out;
 }
