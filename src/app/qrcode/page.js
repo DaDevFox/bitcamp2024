@@ -11,12 +11,9 @@ export default function qrcodepage(props) {
   
   useEffect(() => {
     const scanner = new Html5QrcodeScanner('reader', {
-      qrbox: {
-        width: 600, // height and width of the scanning box
-        height: 250
-      },
+      qrbox: 1000,
       fps: 5, // fps for qr code scanning, don't make it too high
-      aspectRatio: 1.3, // this will not crop the image and will send full image to the scanner
+      aspectRatio: 1, // this will not crop the image and will send full image to the scanner
       })
   
       scanner.render(success, error);
