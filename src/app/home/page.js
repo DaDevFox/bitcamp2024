@@ -38,13 +38,13 @@ export default function Home(props) {
   }, []);
 
   const onShowScanClick = () => {
-    setShowScanUI(true);
+    if (!showScanUI) setShowScanUI(true);
   };
 
   return (
     <main className={styles.main}>
-      {!showScanUI ??
-        (scanResult ? (
+      {showScanUI ? (
+        scanResult ? (
           // If the scan result was a success, do the following:
           <div>
             <p>Scan Result: {scanResult}</p>
@@ -52,7 +52,10 @@ export default function Home(props) {
         ) : (
           // Otherwise, do this:
           <div id="reader"></div>
-        ))}
+        )
+      ) : (
+        0
+      )}
 
       <FloatingButton onclick={onShowScanClick}>
         <FaCamera
