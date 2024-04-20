@@ -1,37 +1,52 @@
+"use client";
+
 import React from "react";
 import styles from "../page.module.css";
+import { Transition } from "react-transition-group";
 
-export default function Podium({
-  base_height,
-  decrease_per_height,
-  ...titles
-}) {
-  var podiums;
-  var podium_count = 3;
+import { useState, useEffect } from "react";
 
-  for (var i = 0; i < podium_count; i++) {
-    podiums += (
-      <div className={styles.podium_item_container}>
-        <p className={styles.podium_item_text}>{titles[i]}</p>
-        <div className={styles.podium_item_fill}></div>
-      </div>
-    );
-  }
+const defaultStyles = {
+  transition: `opacity 300ms ease-in-out`,
+  opacity: 0,
+};
+
+const transitionStyles = {
+  entering: { opacity: 1 },
+  entered: { opacity: 1 },
+  exiting: { opacity: 0 },
+  exited: { opacity: 0 },
+};
+
+export default function Podium(props) {
+  //const [heights, setHeights] = useState([]);
+
+  const [showPodiums, setShowPodiums] = useState(false);
+
+  useEffect(() => {
+    setShowPodiums(!showPodiums);
+  }, []);
 
   return (
     <div className={styles.podium_container}>
-      <div className={styles.podium_item_container}>
-        <p className={styles.podium_item_text}>{props.title1 ?? 1}</p>
-        <div className={styles.podium_item_fill}></div>
-      </div>
-      <div className={styles.podium_item_container}>
-        <p className={styles.podium_item_text}>{props.title2 ?? 2}</p>
-        <div className={styles.podium_item_fill}></div>
-      </div>
-      <div className={styles.podium_item_container}>
-        <p className={styles.podium_item_text}>{props.title3 ?? 3}</p>
-        <div className={styles.podium_item_fill}></div>
-      </div>
+      {props.titles.map((title, index) => {
+        return (
+          <Transition key={index} in={showPodiums} timeout={300}>
+            {(state) => (
+              <div className={styles.podium_item_container}>
+                <p className={styles.podium_item_text}>{title}</p>
+                <div
+                  style={{
+                    ...defaultStyles,
+                    ...transitionStyles[state],
+                  }}
+                  className={styles.podium_item_fill}
+                ></div>
+              </div>
+            )}
+          </Transition>
+        );
+      })}
     </div>
   );
 }
