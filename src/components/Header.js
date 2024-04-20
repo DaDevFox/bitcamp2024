@@ -12,7 +12,7 @@ export default function Header() {
       <Link href="/">
         <b>TerraPodium</b>
       </Link>
-      <Link href="/" className={styles.login}>
+      <Link href="/login" className={styles.login}>
         Log in
       </Link>
     </header>
