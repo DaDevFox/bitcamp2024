@@ -50,5 +50,6 @@ export default function Home(props) {
       }
 
   <Podium titles={titles} />
+  </main>
   );
 }
