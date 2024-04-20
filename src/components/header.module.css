@@ -1,0 +1,11 @@
+.logo {
+  color: #ff0000;
+  position: relative;
+  margin-right: 0.3rem;
+}
+
+.login {
+  margin-left: auto;
+  border-radius: 8px;
+  font-size: 1rem;
+}
