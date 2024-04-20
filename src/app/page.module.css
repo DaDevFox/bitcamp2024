@@ -1,55 +1,55 @@
-
-.leaderboard{
+.leaderboard {
   padding: 1rem;
   border-radius: 0.5rem;
 
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
 
   background-color: #eee;
   height: 40rem;
   width: 60rem;
 }
 
-.placement_container{
+.placement_container {
   margin: 0rem 0rem 1rem 0rem;
   height: 4rem;
 }
 
-.leaderboard_item{
+.leaderboard_item {
   border-radius: 1rem;
-  min-width: calc(100%); 
+  min-width: calc(100%);
   height: 5rem;
-  background-color: #aaa; }
-
-.podium_container{
-  padding: 4rem;
-  width: 30rem; 
-  height: 15rem;
-  display: flex;
-  justify-content: center; 
+  background-color: #aaa;
 }
 
-.podium_item_container{
+.podium_container {
+  padding: 4rem;
+  width: 30rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+}
+
+.podium_item_container {
   margin: 0rem 1rem 0rem 1rem;
   width: 6rem;
   height: 100%;
 }
 
-.podium_item_fill{
+.podium_item_fill {
   position: asbsolute;
   padding: 2rem 0rem 0rem 0rem;
   height: 100%;
   background-color: black;
 }
 
-.podium_item_text{
+.podium_item_text {
   text-align: center;
   color: black;
 }
 
 .animate {
-  transition: transform .35s ease-in-out;
+  transition: transform 0.35s ease-in-out;
 }
 
 .animate.grow {
@@ -103,33 +103,6 @@
   grid-template-columns: repeat(4, minmax(25%, auto));
   max-width: 100%;
   width: var(--max-width);
-}
-
-.card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
-}
-
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
-}
-
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-}
-
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-  text-wrap: balance;
 }
 
 .center {
