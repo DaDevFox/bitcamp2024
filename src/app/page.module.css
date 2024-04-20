@@ -228,3 +228,71 @@
     transform: rotate(0deg);
   }
 }
+
+.login div {
+  background: hsla(0, 0%, 100%, 0.9);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 12px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin-bottom: 10rem;
+  flex-grow: 1;
+}
+
+.login h1 {
+  text-align: center;
+  padding: 2rem;
+}
+
+.login button {
+  height: 3rem;
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  background-color: #002afff2;
+  color: #fff;
+  border-radius: 8px;
+  border: 2px solid #3e3e3e00;
+  width: 20rem;
+  transition-duration: 0.4s;
+}
+
+.login button:disabled {
+  background-color: hsl(212, 100%, 29%);
+}
+
+.login button:hover {
+  background-color: rgb(42, 116, 255);
+}
+
+.text {
+  background-color: aliceblue;
+  color: rgb(0, 0, 0);
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 2px solid #3e3e3e00;
+  width: 20rem;
+}
+
+.check input {
+  height: 1rem;
+  display: flex;
+}
+
+.check label {
+  text-align: center;
+}
