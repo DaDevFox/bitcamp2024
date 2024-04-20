@@ -15,9 +15,13 @@
   height: 4rem;
 }
 
-.placement_text {
-  align-items: center;
-  justify-content: center;
+.placement_building {
+  padding: 1rem;
+}
+
+.placement_points {
+  margin-left: auto;
+  padding: 1rem;
 }
 
 .leaderboard_item {
@@ -25,6 +29,8 @@
   min-width: calc(100%);
   height: 5rem;
   background-color: #aaa;
+  display: flex;
+  align-items: center;
 }
 
 .podium_container {
